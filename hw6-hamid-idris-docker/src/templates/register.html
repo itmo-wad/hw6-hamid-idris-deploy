@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %} 
+<div class="login-page">
+    <h2 class="p-3 mb-2 bg-dark text-white">Register</h2>
+    {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-danger" role="alert"> {{ message|capitalize }} </div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+    <div class="form" >
+      <form class="login-form" action="{{ url_for('register') }}" method= "POST">
+        <input type="text" class="form-control" name="username" placeholder="username"/>
+        <input type="password" class="form-control" name="pass" placeholder="password"/>
+        <button>Create Account</button>
+        <p class="message">Already registered? <a href="{{ url_for('logout') }}">Sign In</a></p>
+      </form>
+    </div>
+  </div>
+{% endblock %}
