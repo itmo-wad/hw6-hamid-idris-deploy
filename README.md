@@ -4,6 +4,8 @@ https://github.com/itmo-wad/hw5-hamid-idris-db
 
 
 
-### install requirements and enjoy ###
+### Tools   ###
+**docker** https://flask.palletsprojects.com/en/1.1.x/deploying/index.html
+**WAD lectures** https://github.com/itmo-wad/lecture_materials/tree/master/docker
 
-pip install -r requirements.txt
+requirements.txt
