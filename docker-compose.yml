@@ -1,0 +1,36 @@
+version: "3.2"
+services:
+  nginx:
+    image: nginx
+    ports:
+      - "3334:80"
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+
+  flask-simple:
+    build:
+      dockerfile: Dockerfile1
+      context: .
+    command: python app.py 
+    ports:
+      - "80:5000"
+    volumes:
+      - ./src:/usr/src/app/
+  redis:
+    image: redis
+    volumes:
+      - redisdata:/data
+    ports:
+      - "6379:6379"
+          
+  mongodb:
+    image: mongo
+    volumes:
+      - mongodata:/data/db
+      - ./dump:/dump
+    ports:
+      - "27017:27017"
+      
+volumes:
+  mongodata:
+  redisdata:
