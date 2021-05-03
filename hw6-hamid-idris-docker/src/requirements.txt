@@ -1,7 +1,0 @@
-flask
-pymongo
-bcrypt
-werkzeug
-flask_pymongo
-redis
-flask_caching
