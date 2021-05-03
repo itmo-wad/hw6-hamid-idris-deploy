@@ -1,5 +1,9 @@
-Dump database:
+## Home Work 6 ##
+In this home we have deployed our app from the previous home work no 5 \
+https://github.com/itmo-wad/hw5-hamid-idris-db
 
-```
-docker exec -it 05_database_persistence_mongodb_1 mongodump -o /dump
-```
+
+
+### install requirements and enjoy ###
+
+pip install -r requirements.txt
